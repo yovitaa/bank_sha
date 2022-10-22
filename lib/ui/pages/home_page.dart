@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
                 height: 2,
               ),
               Text(
-                'shaynahan',
+                'yovita',
                 style: blackTextStyle.copyWith(
                   fontSize: 20,
                   fontWeight: semiBold,
@@ -178,7 +178,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Shayna Hanna',
+            'Yovita Ananda',
             style: whiteTextStyle.copyWith(
               fontSize: 18,
               fontWeight: medium,
@@ -458,7 +458,7 @@ class HomePage extends StatelessWidget {
               ),
               HomeTipsItem(
                 imageUrl: 'assets/img_tips4.png',
-                title: 'ave more penny buy this instead',
+                title: 'Save more penny buy this instead',
                 url: 'https://www.google.com',
               ),
             ],

@@ -314,7 +314,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildLatestTransaction(){
+  Widget buildLatestTransaction() {
     return Container(
       margin: const EdgeInsets.only(
         top: 30,
@@ -323,52 +323,45 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Latest Transaction',
+            'Latest Transactions',
             style: blackTextStyle.copyWith(
               fontSize: 16,
               fontWeight: semiBold,
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(22),
-            margin: const EdgeInsets.only(
-              top: 14,
-            ),
+            padding: const EdgeInsets.all(122),
+            margin: const EdgeInsets.only(top: 14),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: whiteColor,
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 HomeLatestTransactionItem(
-                  iconUrl: 'assets/ic_transaction_cat1/png',
+                  iconUrl: 'assets/ic_transaction_cat1.png',
+                  time: 'Yesterday',
                   title: 'Top Up',
-                  time: 'yesterday',
                   value: '+ 450.000',
                 ),
                 HomeLatestTransactionItem(
-                  iconUrl: 'assets/ic_transaction_cat2/png',
-                  title: 'Cashback',
+                  iconUrl: 'assets/ic_transaction_cat2.png',
                   time: 'Sep 11',
+                  title: 'Withdraw',
                   value: '+ 22.000',
                 ),
                 HomeLatestTransactionItem(
-                  iconUrl: 'assets/ic_transaction_cat3/png',
-                  title: 'Withdraw',
+                  iconUrl: 'assets/ic_transaction_cat3.png',
                   time: 'Sep 2',
+                  title: 'Transfer',
                   value: '- 5.000',
                 ),
                 HomeLatestTransactionItem(
-                  iconUrl: 'assets/ic_transaction_cat4/png',
-                  title: 'Transfer',
+                  iconUrl: 'assets/ic_transaction_cat4.png',
                   time: 'Aug 27',
-                  value: '- 123.500',
-                ),
-                HomeLatestTransactionItem(
-                  iconUrl: 'assets/ic_transaction_cat5/png',
                   title: 'Electric',
-                  time: 'Feb 18',
-                  value: '- 12.300.000',
+                  value: '- 123.500',
                 ),
               ],
             ),
@@ -401,19 +394,19 @@ class HomePage extends StatelessWidget {
             child: Row(
               children: const [
                 HomeUserItem(
-                  imageUrl: 'assets/img_friends1.png',
+                  imageUrl: 'assets/img_friend1.png',
                   username: 'yuanita',
                 ),
                 HomeUserItem(
-                  imageUrl: 'assets/img_friends2.png',
+                  imageUrl: 'assets/img_friend2.png',
                   username: 'jani',
                 ),
                 HomeUserItem(
-                  imageUrl: 'assets/img_friends3.png',
+                  imageUrl: 'assets/img_friend3.png',
                   username: 'urip',
                 ),
                 HomeUserItem(
-                  imageUrl: 'assets/img_friends4.png',
+                  imageUrl: 'assets/img_friend4.png',
                   username: 'masa',
                 ),
               ],            

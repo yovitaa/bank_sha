@@ -1,4 +1,6 @@
 import 'package:bank_sha/shared/theme.dart';
+import 'package:bank_sha/ui/widget/buttons.dart';
+import 'package:bank_sha/ui/widget/profile_menu_item.dart';
 import 'package:flutter/material.dart';
 
 class ProfilPage extends StatelessWidget {
@@ -14,76 +16,119 @@ class ProfilPage extends StatelessWidget {
         centerTitle: true,
         iconTheme:  IconThemeData(
           color: blackColor,
-        ),
-        title: Text(
-          'My Profile',
-          style: blackTextStyle.copyWith(
-            fontSize: 20,
-            fontWeight: semiBold,
+          ),
+          title: Text(
+            'My Profile',
+            style: blackTextStyle.copyWith(
+              fontSize: 20,
+              fontWeight: semiBold,
+            ),
           ),
         ),
-      ),
-      body: ListView(
-        padding:  const EdgeInsets.symmetric(
-          horizontal: 24,
-        ),
-        children: [
-          const SizedBox(
-            height: 40,
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 30,
-              vertical: 22,
+        body: ListView(
+          padding:  const EdgeInsets.symmetric(
+            horizontal: 24,
             ),
-            decoration: BoxDecoration(
-              color: whiteColor,
-              borderRadius:  BorderRadius.circular(20),
-            ),
-            child: Column(
-              children: [
-                Container(
-              width: 120,
-              height: 120,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage(
-                    'assets/img_profile.png',
-                  ),
-                ),
+            children: [
+              const SizedBox(
+                height: 30,
               ),
-              child: Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  width: 28,
-                  height: 28,
-                  decoration: BoxDecoration(
-                    shape:BoxShape.circle,
-                    color: whiteColor,
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30,
+                  vertical: 22,
+                ),
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  borderRadius:  BorderRadius.circular(20),
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                  width: 120,
+                  height: 120,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/img_profile.png',
+                      ),
+                    ),
                   ),
-                  child: Center(
-                    child: Icon(
-                      Icons.check_circle,
-                      color: greenColor,
-                      size: 24,
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      width: 28,
+                      height: 28,
+                      decoration: BoxDecoration(
+                        shape:BoxShape.circle,
+                        color: whiteColor,
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.check_circle,
+                          color: greenColor,
+                          size: 24,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Text(
-              'Yovita Ananda',
-              style: blackTextStyle.copyWith(
-                fontSize: 18,
-                fontWeight: medium,
-              ),
-            ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'Yovita Ananda',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: medium,
+                  ),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                ProfileMenuItem(
+                  iconUrl: 'assets/ic_edit_profile.png',
+                  title: 'Edit Profile',
+                  onTap: () {},
+                ),
+                ProfileMenuItem(
+                  iconUrl: 'assets/ic_pin.png',
+                  title: 'My PIN',
+                  onTap: () {},
+                ),
+                ProfileMenuItem(
+                  iconUrl: 'assets/ic_wallet.png',
+                  title: 'Wallet Settings',
+                  onTap: () {},
+                ),
+                ProfileMenuItem(
+                  iconUrl: 'assets/ic_reward.png',
+                  title: 'My Rewards',
+                  onTap: () {},
+                ),
+                ProfileMenuItem(
+                  iconUrl: 'assets/ic_help.png',
+                  title: 'Help Center',
+                  onTap: () {},
+                ),
+                ProfileMenuItem(
+                  iconUrl: 'assets/ic_logout.png',
+                  title: 'Log Out',
+                  onTap: () {},
+                ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 87,
+          ),
+          CustomTextButton(
+            title: 'Report a Problem',
+            onPressed: () {},
+          ),
+          const SizedBox(
+            height: 50,
           ),
         ],
       ),

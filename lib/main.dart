@@ -5,6 +5,7 @@ import 'package:bank_sha/ui/pages/pin_page.dart';
 import 'package:bank_sha/ui/pages/profil_page.dart';
 import 'package:bank_sha/ui/pages/profile_edit_page.dart';
 import 'package:bank_sha/ui/pages/profile_edit_pin_page.dart';
+import 'package:bank_sha/ui/pages/profile_edit_success_page.dart';
 import 'package:bank_sha/ui/pages/sign_in_page.dart';
 import 'package:bank_sha/ui/pages/sign_up_page.dart';
 import 'package:bank_sha/ui/pages/sign_up_set_ktp_page.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         '/pin' : (context) => const PinPage(),
         '/profile-edit' :(context) => const ProfileEditPage(),
         '/profile-edit-pin' :(context) => const ProfileEditPinPage(),
+        '/profile-edit-success' :(context) => const ProfileEditSuccessPage(),
       },
     );
   }

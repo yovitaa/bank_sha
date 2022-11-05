@@ -15,13 +15,11 @@ class _TransferAmountPageState extends State<TransferAmountPage> {
   final TextEditingController amountController =
       TextEditingController(text: '0');
 
-
   @override
   void initState() {
     super.initState();
 
     amountController.addListener(() {
-
         final text = amountController.text;
 
         amountController.value = amountController.value.copyWith(

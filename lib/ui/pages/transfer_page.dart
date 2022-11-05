@@ -2,7 +2,7 @@ import 'package:bank_sha/shared/theme.dart';
 import 'package:bank_sha/ui/widget/buttons.dart';
 import 'package:bank_sha/ui/widget/forms.dart';
 import 'package:bank_sha/ui/widget/transfer_recent_user_item.dart';
-import 'package:bank_sha/ui/widget/transfer_result_item.dart';
+import 'package:bank_sha/ui/widget/transfer_result_user_item.dart';
 import 'package:flutter/material.dart';
 
 class TransferPage extends StatelessWidget {
@@ -46,7 +46,7 @@ class TransferPage extends StatelessWidget {
           CustomFilledButton(
             title: 'Continue',
             onPressed: () {
-              Navigator.pushNamed(context, '/transer-amount');
+              Navigator.pushNamed(context, '/transfer-amount');
             },
           ),
           const SizedBox(

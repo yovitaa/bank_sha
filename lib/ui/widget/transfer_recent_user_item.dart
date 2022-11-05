@@ -41,7 +41,7 @@ class TransferRecentUserItem extends StatelessWidget {
                   imageUrl,
                 ),
               ),  
-            )
+            ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +58,7 @@ class TransferRecentUserItem extends StatelessWidget {
               ),
               Text(
                 '@$username',
-                style: greenTextStyle.copyWith(
+                style: greyTextStyle.copyWith(
                   fontSize: 12,
                 ),
               ),
@@ -84,9 +84,9 @@ class TransferRecentUserItem extends StatelessWidget {
                   ),
                 ),
               ],
-            )
-        ],
-      ),
+            ),
+          ],
+        ),
     );
   }
 }

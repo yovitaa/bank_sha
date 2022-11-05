@@ -28,7 +28,7 @@ class _PinPageState extends State<PinPage> {
   deletePin(){
     if(pinController.text.isNotEmpty){
       setState(() {
-        pinController.text = pinController.text..substring(0, pinController.text.length - 1 );
+        pinController.text = pinController.text.substring(0, pinController.text.length - 1 );
       });
     }
   }

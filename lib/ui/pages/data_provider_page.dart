@@ -1,4 +1,6 @@
 import 'package:bank_sha/shared/theme.dart';
+import 'package:bank_sha/ui/widget/buttons.dart';
+import 'package:bank_sha/ui/widget/data_provider_item.dart';
 import 'package:flutter/material.dart';
 
 class DataProviderPage extends StatelessWidget {
@@ -61,6 +63,44 @@ class DataProviderPage extends StatelessWidget {
                 ],
               )
             ],
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Text(
+            'Select Provider',
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          const DataProvideritem(
+            name: 'Telkomsel',
+            imageUrl: 'assets/img_provider_telkomsel.png',
+            isSelected: true,
+          ),
+          const DataProvideritem(
+            name: 'Indosat Ooredoo',
+            imageUrl: 'assets/img_provider_indosat.png',
+          ),
+          const DataProvideritem(
+            name: 'Singtel ID',
+            imageUrl: 'assets/img_provider_singtel.png',
+          ),
+          const SizedBox(
+            height: 135,
+          ),
+          CustomFilledButton(
+            title: 'Continue',
+            onPressed: () {
+              Navigator.pushNamed(context, '/data-package');
+            },
+          ),
+          const SizedBox(
+            height: 57,
           ),
         ],
       ),

@@ -29,7 +29,7 @@ class SignUpFormModel{
   SignUpFormModel copyWith({
     String? pin,
     String? profil_page,
-    String? ktp,
+    String? ktp, String? profilePicture,
   }) =>
       SignUpFormModel(
         name: name,

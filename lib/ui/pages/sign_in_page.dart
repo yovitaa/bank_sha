@@ -6,7 +6,6 @@ import 'package:bank_sha/ui/widget/buttons.dart';
 import 'package:bank_sha/ui/widget/forms.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:http/retry.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage ({super.key});

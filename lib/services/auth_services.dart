@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:bank_sha/models/sign_up_form_model.dart';
+import 'package:bank_sha/models/user_model.dart';
 import 'package:bank_sha/shared/shared_values.dart';
 import 'package:http/http.dart' as http;
 
@@ -23,4 +25,25 @@ class AuthService{
       rethrow;
     }
   }
+
+
+Future<UserModel> register(SignUpFormModel data) async {
+  try {
+    final res = await http.post(
+      Uri.parse('$baseUrl/register'),
+    );
+
+    if(res.statusCode == 200){
+      UserModel user = UserModel.fromJson(jsonDecode(res.body));
+      user = user.copyWith(password: data.password);
+
+      return user;
+    }
+    else {
+      throw jsonDecode(res.body)['message'];
+    }
+  } catch (e) {
+    rethrow;
+  }
+}
 }

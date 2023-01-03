@@ -166,11 +166,12 @@ class _SignUpSetKtpPageState extends State<SignUpSetKtpPage> {
               CustomTextButton(
                 title: 'Skip for Now',
                 onPressed: () {
-                  context.read<AuthBloc>().add(
-                            AuthRegister(
-                              widget.data,
-                            ),
-                          );
+                  Navigator.pushNamed(context, '/sign-up-success');
+                  // context.read<AuthBloc>().add(
+                  //           AuthRegister(
+                  //             widget.data,
+                  //           ),
+                  //         );
                 },
               )
             ],
